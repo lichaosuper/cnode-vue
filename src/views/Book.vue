@@ -1,20 +1,20 @@
 <template>
-  <div class="about">
-    <div v-for="(item, index) in aboutdata" :key="index">
+  <div class="book">
+    <div v-for="(item, index) in bookdata" :key="index">
       <public-card :dataObj="item" />>
     </div>
   </div>
 </template>
 
 <script>
-import aboutdata from "../assets/about-data";
-import PublicCard from "../components/Common/PublicCard.vue";
+import bookdata from "../assets/book-data";
+import PublicCard from "../components/Common/PublicCard";
 export default {
-  name: "About" /*指组件自身组件调用自身组件*/,
+  name: "",
   props: [""],
   data() {
     return {
-      aboutdata: aboutdata
+      bookdata: bookdata
     };
   },
 
@@ -34,13 +34,8 @@ export default {
 };
 </script>
 <style scoped>
-.about {
+.book {
   width: 90%;
   margin: 0 auto;
-}
-
-img {
-  width: 500px;
-  height: 120px;
 }
 </style>
